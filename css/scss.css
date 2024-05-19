@@ -1,0 +1,205 @@
+@import url(/css/darkmode.css);
+@import url(/css/taskarea.css);
+@import url(/css/funcheader.css);
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/Roboto-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/Roboto-Regular.woff") format("woff");
+}
+
+:root {
+  --medium-priority-bg: orange;
+  --high-priority-bg: #ff4141;
+  --low-priprity-bg: yellowgreen;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100lvh;
+  width: 100vw;
+  padding: 0 10px 0 10px;
+  /* margin: 0 10px 0 10px; */
+}
+
+.dark-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.header {
+  grid-column: 1 /0;
+  background-color: #fff;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5px;
+  height: 50px;
+  max-width: 1285px;
+  width: 100%;
+  border-bottom: 1px solid rgba(150, 149, 149, 0.4078431373);
+  z-index: 1;
+}
+
+.header svg {
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  color: #556178;
+}
+.header p {
+  font-size: 20px;
+  margin-left: 40px;
+}
+.header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.seprator {
+  border-right: 1px solid rgba(150, 149, 149, 0.4078431373);
+  padding: 0 25px 0 10px;
+}
+
+.aside {
+  grid-row: 1 / span 2;
+  overflow-y: auto;
+  z-index: 2;
+  width: 240px;
+  max-height: 780px;
+  height: 100%;
+  border-right: 1px solid rgba(150, 149, 149, 0.4078431373);
+  background-color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.aside svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.aside .svg-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-items {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-items h4 {
+  color: #5d666e;
+}
+
+.sidebar-items:hover h4 {
+color: #000000;
+}
+
+
+
+.bottom-items {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow-y: auto;
+  width: 1296px;
+  padding: 0 10px;
+  grid-column: 2/-1;
+}
+
+@media (max-width: 1200px) {
+  /* Tablet and below */
+
+  .header {
+    height: fit-content;
+  }
+
+  .aside {
+    width: 200px;
+    padding: 0 10px;
+  }
+
+  .main {
+    width: 1200px;
+    margin: 0 10px;
+    height: 740px;
+  }
+
+  .funcheader {
+    padding: 0 5px;
+    width: 100%;
+  }
+
+  .task-area {
+    margin: 0;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .container {
+    margin: 0;
+  }
+
+  .header {
+  }
+
+  .aside {
+    width: 170px;
+    padding: 0 10px;
+  }
+
+  .main {
+  }
+
+  .funcheader {
+  }
+
+  .task-area {
+  }
+}

@@ -1,0 +1,179 @@
+p {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.task-column {
+  padding: 3px;
+}
+
+.task-area {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  max-width: 1210px;
+  width: 100%;
+  height: 600px;
+  margin: 10px;
+  grid-gap: 10px;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.backlog {
+  border-bottom: 1px solid #a49e9e;
+}
+
+.todo {
+  border-bottom: 2px solid #a49e9e;
+}
+
+.progress {
+  border-bottom: 2px solid #ff4141;
+}
+
+.reivew {
+  border-bottom: 2px solid orange;
+}
+
+.done {
+  border-bottom: 2px solid yellowgreen;
+}
+.column-header-details {
+  display: flex;
+  align-items: center;
+}
+
+.column-header-details h4 {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.column-header-details p {
+  background-color: #e7e2e2;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-size: 12px;
+}
+
+.column-header-details h4{ 
+  color: #5D666E;
+
+}
+.column-header-filter svg {
+  width: 20px;
+  height: 20px;
+}
+
+.add-task-btn button {
+  border: none;
+  border-left: 3px solid #F1F1F1;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 10px;
+  color: #70787F;
+}
+
+.task-box {
+  border: 1px solid rgb(213, 208, 208);
+  border-radius: 5px;
+  height: 145px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.task-box-prority {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.prority {
+  border-radius: 3px;
+  width: fit-content;
+  margin: 0;
+  padding: 0 2px;
+  color: #fff;
+}
+
+.low-prority {
+  background-color: #ECF5E9;
+  color: #82BE6C;
+}
+
+.high-prority {
+  background-color: #FFE9E5;
+  color: #FF6049;
+}
+
+.medium-prority {
+  background-color: #FFF1DD;
+  color: #FF9C07;
+}
+.task-box-prority svg {
+  height: 25px;
+  width: 25px;
+}
+
+.task-box-details h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.task-box-details p {
+  margin: 0;
+  color: #59616A;
+  font-size: 14px;
+}
+
+.task-box-comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.task-box-comment img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  margin-right: -15px;
+  border: 1px solid #fff;
+}
+
+.task-box-comment svg {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment p {
+  color: #70777F;
+  margin: 0;
+}
+.comment svg {
+  fill: #70777F;
+}

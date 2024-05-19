@@ -1,0 +1,76 @@
+.func-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 10%;
+  grid-template-rows: auto auto;
+  max-width: 1260px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  background-color: #fff;
+}
+
+.func-header button {
+  margin: 0 5px;
+  background-color: #fff;
+  color: #677085;
+  border-radius: 5px;
+  border: 1px solid #a4a1a170;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.func-header button:hover {
+  background-color: #F1F3FF;
+  color: #115DFF;
+}
+
+.func-header button:focus {
+  background-color: #F1F3FF;
+  color: #115DFF;
+}
+
+.task-header {
+  grid-column: 1 / span 4;
+}
+
+.week-func {
+  display: flex;
+  justify-content: space-around;
+}
+
+.week-func div {
+  margin-right: auto;
+}
+
+.task-func,
+.filter-func {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-func div {
+  display: flex;
+  align-items: center;
+}
+
+.filter-func button {
+  border: none;
+}
+
+.add-task-func button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: #2169FF;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
