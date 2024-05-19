@@ -80,7 +80,7 @@ body {
 }
 .header p {
   font-size: 20px;
-  margin-left: 40px;
+  margin: 0 20px;
 }
 .header img {
   width: 35px;
@@ -88,8 +88,10 @@ body {
   border-radius: 100%;
 }
 .seprator {
-  border-right: 1px solid rgba(150, 149, 149, 0.4078431373);
-  padding: 0 25px 0 10px;
+  padding: 0 20px;
+  font-size: 35px;
+  color: #f4f4f4;
+  font-weight: 100;
 }
 
 .aside {
@@ -126,10 +128,8 @@ body {
 }
 
 .sidebar-items:hover h4 {
-color: #000000;
+  color: #000000;
 }
-
-
 
 .bottom-items {
   margin-top: auto;
@@ -184,26 +184,195 @@ color: #000000;
 
   .container {
     margin: 0;
+    padding: 0;
   }
 
   .header {
+    width: 100%;
+    height: 100%;
   }
 
-  .aside {
-    width: 170px;
+  .header svg {
+    margin-right: 0;
+    width: 25px;
+    height: 25px;
+    color: #556178;
+  }
+
+  .header svg:last-child {
+    margin: 0;
+  }
+
+  .header p {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+
+  .header img {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 3px 0;
+  }
+
+  .seprator {
     padding: 0 10px;
   }
 
-  .aside .sidebar-items h4,h2{
+  .dark-mode {
+    margin-right: 3px;
+  }
+  .dark-mode label svg.sun {
+    left: 5px;
+    fill: #242424;
+    transition: 0.3s;
+  }
+
+  .dark-mode label svg {
+    position: absolute;
+    width: 8px;
+    top: -0.9px;
+    z-index: 100;
+  }
+  .dark-mode label svg.moon {
+    left: 24px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+  }
+  .dark-mode label svg {
+    position: absolute;
+    width: 8px;
+    top: -5px;
+    z-index: 100;
+  }
+  .dark-mode input:checked + label:after {
+    left: 33px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+  }
+  .dark-mode label:after {
+    content: "";
+    width: 14px;
+    height: 11px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  .dark-mode label {
+    width: 35px;
+    height: 15px;
+    position: relative;
+    display: block;
+    background: #f3f3f3;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .dark-mode label:active:after {
+    width: 15px;
+  }
+
+  .aside {
+    width: 30px;
+    padding: 20px 25px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .aside .svg-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .aside svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 0;
+  }
+
+  .aside .sidebar-items h4,
+  .aside .sidebar-items h2 {
     display: none;
   }
 
   .main {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 0 5px;
   }
 
-  .funcheader {
+  .func-header {
+    grid-template-columns: repeat(3, 80%) 10%;
+    width: 100%;
+    overflow-x: auto;
+    padding: 5px 0;
+  }
+
+  .task-header h1 {
+    font-size: 20px;
+  }
+
+  .week-func,
+  .task-func,
+  .filter-func,
+  .add-task-func {
+    width: 245px;
+  }
+
+  .week-func button,
+  .task-func button,
+  .filter-func button,
+  .add-task-func button {
+    font-size: x-small;
+    height: 20px;
+  }
+
+  .filter-func svg {
+    width: 20px;
+    height: 20px;
   }
 
   .task-area {
+    margin: 0;
+    grid-template-columns: repeat(5, 50%);
+    overflow-x: auto;
+    height: 100%;
+  }
+
+  .task-box {
+    height: 120px;
+  }
+
+  .column-header-details h4,
+  .column-header-details p,
+  .prority,
+  .task-box-details h4,
+  .task-box-details p,
+  .comment p {
+    font-size: 10px;
+  }
+
+  .column-header-filter svg,
+  .comment svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .task-box-comment img,
+  .task-box-prority svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  .add-task-btn button {
+    font-size: 10px;
+    padding: 5px;
   }
 }
