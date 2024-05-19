@@ -194,6 +194,10 @@ color: #000000;
     padding: 0 10px;
   }
 
+  .aside .sidebar-items h4,h2{
+    display: none;
+  }
+
   .main {
   }
 
