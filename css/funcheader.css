@@ -6,12 +6,12 @@
   width: 100%;
   position: relative;
   top: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .func-header button {
   margin: 0 5px;
-  background-color: #fff;
+  background-color: transparent;
   color: #677085;
   border-radius: 5px;
   border: 1px solid #a4a1a170;
@@ -23,13 +23,13 @@
 }
 
 .func-header button:hover {
-  background-color: #F1F3FF;
-  color: #115DFF;
+  background-color: #f1f3ff;
+  color: #115dff;
 }
 
 .func-header button:focus {
-  background-color: #F1F3FF;
-  color: #115DFF;
+  background-color: #f1f3ff;
+  color: #115dff;
 }
 
 .task-header {
@@ -66,7 +66,7 @@
   justify-content: center;
   width: 100%;
   align-items: center;
-  background-color: #2169FF;
+  background-color: #2169ff;
   color: #fff;
   border: none;
   padding: 10px;

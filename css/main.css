@@ -1,5 +1,5 @@
-@import url(/css/darkmode.css);
-@import url(/css/taskarea.css);
+/* @import url(/css/darkmode.css); */
+/* @import url(/css/taskarea.css); */
 @import url(/css/funcheader.css);
 
 @font-face {
@@ -47,19 +47,247 @@ body {
   height: 100lvh;
   width: 100vw;
   padding: 0 10px 0 10px;
-  /* margin: 0 10px 0 10px; */
 }
 
-.dark-mode {
+.switch {
+  width: 65px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(39, 38, 38);
+  position: relative;
+  margin-right: 15px;
+}
+
+.flicker {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  transition: 0.3s;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+    inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+.dark {
+  background-color: rgb(57, 57, 57);
+  transition: 0.3s;
+}
+
+.dark .flicker {
+  transform: translateX(40px);
+}
+
+.dark > * {
+  color: rgb(255, 255, 255);
+}
+
+.dark > .column-header-details p {
+  background-color: transparent;
+}
+
+.dark > .header p {
+  color: #fff;
+}
+
+.profile-dark {
+  border: 1px solid rgb(57, 57, 57);
+}
+
+h4 {
+  margin: 0;
+}
+
+.task-column {
+  padding: 3px;
+}
+
+.task-area {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  max-width: 1210px;
+  width: 100%;
+  height: 600px;
+  margin: 10px;
+  grid-gap: 10px;
+}
+
+.column-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 40px;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.backlog {
+  border-bottom: 1px solid #a49e9e;
+}
+
+.todo {
+  border-bottom: 2px solid #a49e9e;
+}
+
+.progress {
+  border-bottom: 2px solid #ff4141;
+}
+
+.reivew {
+  border-bottom: 2px solid orange;
+}
+
+.done {
+  border-bottom: 2px solid yellowgreen;
+}
+.column-header-details {
+  display: flex;
+  align-items: center;
+}
+
+.column-header-details h4 {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.column-header-details p {
+  background-color: #e7e2e2;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-size: 12px;
+}
+
+.column-header-details h4 {
+  color: #5d666e;
+}
+.column-header-filter svg {
+  width: 20px;
+  height: 20px;
+}
+
+.add-task-btn button {
+  border: none;
+  border-left: 3px solid #f1f1f1;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 10px;
+  color: #70787f;
+}
+
+.task-box {
+  border: 1px solid rgb(213, 208, 208);
+  border-radius: 5px;
+  height: 145px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.task-box-prority {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.prority {
+  border-radius: 3px;
+  width: fit-content;
+  margin: 0;
+  padding: 0 2px;
+  color: #fff;
+}
+
+.low-prority {
+  background-color: #ecf5e9;
+  color: #82be6c;
+}
+
+.high-prority {
+  background-color: #ffe9e5;
+  color: #ff6049;
+}
+
+.medium-prority {
+  background-color: #fff1dd;
+  color: #ff9c07;
+}
+.task-box-prority svg {
+  height: 25px;
+  width: 25px;
+}
+
+.task-box-details h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.task-box-details p {
+  margin: 0;
+  color: #59616a;
+  font-size: 14px;
+}
+
+.task-box-comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.task-box-comment img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  margin-right: -15px;
+  border: 1px solid #fff;
+}
+
+.task-box-comment svg {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment p {
+  color: #70777f;
+  margin: 0;
+}
+.comment svg {
+  fill: #70777f;
+}
+
+.column-header-dark {
+  background-color: rgb(57, 57, 57);
+}
+
+.moon {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 3px;
+  left: 40px;
 }
 
 .header {
   grid-column: 1 /0;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #242424;
   display: flex;
   align-items: center;
@@ -102,7 +330,7 @@ body {
   max-height: 780px;
   height: 100%;
   border-right: 1px solid rgba(150, 149, 149, 0.4078431373);
-  background-color: #fff;
+  /* background-color: #fff; */
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -143,11 +371,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #fff;
+  /* background-color: #fff; */
   overflow-y: auto;
   width: 1296px;
   padding: 0 10px;
   grid-column: 2/-1;
+}
+
+.dark svg path.stroked {
+  stroke: #fff;
+}
+
+.dark svg path.filled {
+  fill: #fff;
+}
+
+.dark .counter {
+  background-color: transparent;
 }
 
 @media (max-width: 1200px) {

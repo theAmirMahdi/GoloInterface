@@ -4,145 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoLo</title>
-    <link rel="stylesheet" href="./css/scss.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <div class="dark-mode">
-          <input type="checkbox" id="darkmode-toggle" />
-          <label for="darkmode-toggle">
-            <svg
-              version="1.1"
-              class="sun"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 496 496"
-              style="enable-background: new 0 0 496 496"
-              xml:space="preserve"
-            >
-              <rect
-                x="152.994"
-                y="58.921"
-                transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)"
-                width="40.001"
-                height="16"
-              />
-              <rect
-                x="46.9"
-                y="164.979"
-                transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
-                width="40.001"
-                height="16"
-              />
-              <rect
-                x="46.947"
-                y="315.048"
-                transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)"
-                width="40.001"
-                height="16"
-              />
-
-              <rect
-                x="164.966"
-                y="409.112"
-                transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)"
-                width="16"
-                height="39.999"
-              />
-
-              <rect
-                x="303.031"
-                y="421.036"
-                transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)"
-                width="40.001"
-                height="16"
-              />
-
-              <rect
-                x="409.088"
-                y="315.018"
-                transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)"
-                width="40.001"
-                height="16"
-              />
-
-              <rect
-                x="409.054"
-                y="165.011"
-                transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)"
-                width="40.001"
-                height="16"
-              />
-              <rect
-                x="315.001"
-                y="46.895"
-                transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)"
-                width="16"
-                height="39.999"
-              />
-              <path
-                d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392
-            c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z"
-              />
-              <rect x="240" width="16" height="72" />
-              <rect
-                x="62.097"
-                y="90.096"
-                transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)"
-                width="71.999"
-                height="16"
-              />
-              <rect y="240" width="72" height="16" />
-
-              <rect
-                x="90.091"
-                y="361.915"
-                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)"
-                width="16"
-                height="71.999"
-              />
-              <rect x="240" y="424" width="16" height="72" />
-
-              <rect
-                x="361.881"
-                y="389.915"
-                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)"
-                width="71.999"
-                height="16"
-              />
-              <rect x="424" y="240" width="72" height="16" />
-              <rect
-                x="389.911"
-                y="62.091"
-                transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)"
-                width="16"
-                height="71.999"
-              />
-            </svg>
-            <svg
-              version="1.1"
-              class="moon"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 49.739 49.739"
-              style="enable-background: new 0 0 49.739 49.739"
-              xml:space="preserve"
-            >
-              <path
-                d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
-           c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
-           c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
-           C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
-           c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
-           c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z"
-              />
-            </svg>
-          </label>
+        <div class="switch">
+          <div class="flicker"></div>
+          <div class="moon"></div>
         </div>
         <svg
           viewBox="0 -0.5 25 25"
@@ -421,7 +290,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <g clip-path="url(#clip0_15_159)">
-              <rect width="24" height="24" fill="white" />
+              <rect width="24" height="24" fill="none" />
               <path
                 d="M9.5 19C8.89555 19 7.01237 19 5.61714 19C4.87375 19 4.39116 18.2177 4.72361 17.5528L5.57771 15.8446C5.85542 15.2892 6 14.6774 6 14.0564C6 13.2867 6 12.1434 6 11C6 9 7 5 12 5C17 5 18 9 18 11C18 12.1434 18 13.2867 18 14.0564C18 14.6774 18.1446 15.2892 18.4223 15.8446L19.2764 17.5528C19.6088 18.2177 19.1253 19 18.382 19H14.5M9.5 19C9.5 21 10.5 22 12 22C13.5 22 14.5 21 14.5 19M9.5 19C11.0621 19 14.5 19 14.5 19"
                 stroke="#6C737B"
@@ -436,7 +305,7 @@
             </g>
             <defs>
               <clipPath id="clip0_15_159">
-                <rect width="24" height="24" fill="white" />
+                <rect width="24" height="24" fill="none" />
               </clipPath>
             </defs>
           </svg>
@@ -590,6 +459,7 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="stroked"
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M7.30524 15.7137C6.4404 14.8306 5.85381 13.7131 5.61824 12.4997C5.38072 11.2829 5.50269 10.0233 5.96924 8.87469C6.43181 7.73253 7.22153 6.75251 8.23924 6.05769C10.3041 4.64744 13.0224 4.64744 15.0872 6.05769C16.105 6.75251 16.8947 7.73253 17.3572 8.87469C17.8238 10.0233 17.9458 11.2829 17.7082 12.4997C17.4727 13.7131 16.8861 14.8306 16.0212 15.7137C14.8759 16.889 13.3044 17.5519 11.6632 17.5519C10.0221 17.5519 8.45059 16.889 7.30524 15.7137V15.7137Z"
@@ -599,6 +469,7 @@
                   stroke-linejoin="round"
                 ></path>
                 <path
+                  class="stroked"
                   d="M11.6702 7.20292C11.2583 7.24656 10.9598 7.61586 11.0034 8.02777C11.0471 8.43968 11.4164 8.73821 11.8283 8.69457L11.6702 7.20292ZM13.5216 9.69213C13.6831 10.0736 14.1232 10.2519 14.5047 10.0904C14.8861 9.92892 15.0644 9.4888 14.9029 9.10736L13.5216 9.69213ZM16.6421 15.0869C16.349 14.7943 15.8741 14.7947 15.5815 15.0879C15.2888 15.381 15.2893 15.8559 15.5824 16.1485L16.6421 15.0869ZM18.9704 19.5305C19.2636 19.8232 19.7384 19.8228 20.0311 19.5296C20.3237 19.2364 20.3233 18.7616 20.0301 18.4689L18.9704 19.5305ZM11.8283 8.69457C12.5508 8.61801 13.2384 9.02306 13.5216 9.69213L14.9029 9.10736C14.3622 7.83005 13.0496 7.05676 11.6702 7.20292L11.8283 8.69457ZM15.5824 16.1485L18.9704 19.5305L20.0301 18.4689L16.6421 15.0869L15.5824 16.1485Z"
                   fill="#000000"
                 ></path>
@@ -616,6 +487,7 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="filled"
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M3 7C3 6.44772 3.44772 6 4 6H20C20.5523 6 21 6.44772 21 7C21 7.55228 20.5523 8 20 8H4C3.44772 8 3 7.55228 3 7ZM6 12C6 11.4477 6.44772 11 7 11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H7C6.44772 13 6 12.5523 6 12ZM9 17C9 16.4477 9.44772 16 10 16H14C14.5523 16 15 16.4477 15 17C15 17.5523 14.5523 18 14 18H10C9.44772 18 9 17.5523 9 17Z"
@@ -633,15 +505,17 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="stroked"
                   d="M16 18L16 6M16 6L20 10.125M16 6L12 10.125"
-                  stroke="#1C274C"
+                  stroke="#000000"
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>
                 <path
+                  class="stroked"
                   d="M8 6L8 18M8 18L12 13.875M8 18L4 13.875"
-                  stroke="#1C274C"
+                  stroke="#000000"
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -659,7 +533,7 @@
             <div class="backlog column-header">
               <div class="column-header-details">
                 <h4>Backlog</h4>
-                <p>1</p>
+                <p class="counter">1</p>
               </div>
               <div class="column-header-filter">
                 <svg
@@ -669,7 +543,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="7"
                     cy="12"
@@ -766,7 +640,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -840,7 +714,7 @@
             <div class="todo column-header">
               <div class="column-header-details">
                 <h4>To do</h4>
-                <p>3</p>
+                <p class="counter">3</p>
               </div>
               <div class="column-header-filter">
                 <svg
@@ -850,7 +724,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="7"
                     cy="12"
@@ -949,7 +823,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1020,7 +894,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1096,7 +970,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1172,7 +1046,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1246,7 +1120,7 @@
             <div class="progress column-header">
               <div class="column-header-details">
                 <h4>Progress</h4>
-                <p>2</p>
+                <p class="counter">2</p>
               </div>
               <div class="column-header-filter">
                 <svg
@@ -1256,7 +1130,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="7"
                     cy="12"
@@ -1355,7 +1229,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1431,7 +1305,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1505,7 +1379,7 @@
             <div class="reivew column-header">
               <div class="column-header-details">
                 <h4>Waiting Reivew</h4>
-                <p>1</p>
+                <p class="counter">1</p>
               </div>
               <div class="column-header-filter">
                 <svg
@@ -1515,7 +1389,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="7"
                     cy="12"
@@ -1614,7 +1488,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1688,7 +1562,7 @@
             <div class="done column-header">
               <div class="column-header-details">
                 <h4>Done</h4>
-                <p>3</p>
+                <p class="counter">3</p>
               </div>
               <div class="column-header-filter">
                 <svg
@@ -1698,7 +1572,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="7"
                     cy="12"
@@ -1797,7 +1671,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1873,7 +1747,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -1949,7 +1823,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect width="24" height="24" fill="white" />
+                  <rect width="24" height="24" fill="none" />
                   <circle
                     cx="12"
                     cy="7"
@@ -2022,5 +1896,6 @@
         </div>
       </main>
     </div>
+    <script src="JS/darkmode.js"></script>
   </body>
 </html>
