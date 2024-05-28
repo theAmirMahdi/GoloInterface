@@ -9,14 +9,15 @@ let pTagBG = document.querySelectorAll(".counter");
 let taskAreaElem = document.querySelector(".task-area");
 let funcHeaderElem = document.querySelector(".func-header");
 let headerElem = document.querySelector(".header");
-let commentElem = document.querySelectorAll("comment");
+let commentElems = document.querySelectorAll(".comment");
 
-switchElement.addEventListener("click", function () {
+function toggleDarkMode() {
   containerElem.classList.toggle("dark");
   headerElem.classList.toggle("dark");
   asideElem.classList.toggle("dark");
   funcHeaderElem.classList.toggle("dark");
   taskAreaElem.classList.toggle("dark");
+
   taskColumnElem.forEach((elem) => {
     elem.classList.toggle("column-header-dark");
   });
@@ -29,27 +30,31 @@ switchElement.addEventListener("click", function () {
     path.classList.toggle("stroked-dark");
   });
 
-  svgFill.classList.toggle("filld-dark");
+  if (svgFill) {
+    svgFill.classList.toggle("filled-dark");
+  }
 
   pTagBG.forEach((p) => {
     p.classList.toggle("counter-dark");
   });
 
-  commentElem.forEach((c) => {
-    p.classList.toggl("dark");
+  commentElems.forEach((c) => {
+    c.classList.toggle("dark");
   });
 
-  if (containerElem.className.includes("dark")) {
+  if (containerElem.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
   }
-});
+}
+
+switchElement.addEventListener("click", toggleDarkMode);
 
 window.onload = function () {
   let localStorageTheme = localStorage.getItem("theme");
 
   if (localStorageTheme === "dark") {
-    document.body.classList.toggle("dark");
+    toggleDarkMode();
   }
 };

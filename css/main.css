@@ -1,7 +1,3 @@
-/* @import url(/css/darkmode.css); */
-/* @import url(/css/taskarea.css); */
-@import url(/css/funcheader.css);
-
 @font-face {
   font-family: Roboto;
   font-style: normal;
@@ -66,6 +62,7 @@ body {
   position: absolute;
   top: 5px;
   left: 2px;
+  z-index: 2;
   transition: 0.3s;
   box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
     inset -4px -4px 4px rgb(195 193 198 / 90%);
@@ -100,6 +97,81 @@ h4 {
   margin: 0;
 }
 
+.func-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 10%;
+  grid-template-rows: auto auto;
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+
+.func-header button {
+  margin: 0 5px;
+  background-color: transparent;
+  color: #677085;
+  border-radius: 5px;
+  border: 1px solid #a4a1a170;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.func-header button:hover {
+  background-color: #f1f3ff;
+  color: #115dff;
+}
+
+.func-header button:focus {
+  background-color: #f1f3ff;
+  color: #115dff;
+}
+
+.task-header {
+  grid-column: 1 / span 4;
+}
+
+.week-func {
+  display: flex;
+  justify-content: space-around;
+}
+
+.week-func div {
+  margin-right: auto;
+}
+
+.task-func,
+.filter-func {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-func div {
+  display: flex;
+  align-items: center;
+}
+
+.filter-func button {
+  border: none;
+}
+
+.add-task-func button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: #2169ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .task-column {
   padding: 3px;
 }
@@ -107,11 +179,9 @@ h4 {
 .task-area {
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  max-width: 1210px;
   width: 100%;
   height: 600px;
-  margin: 10px;
-  grid-gap: 10px;
+  margin: 10px 0;
 }
 
 .column-header {
@@ -294,7 +364,6 @@ h4 {
   justify-content: flex-end;
   padding: 0 5px;
   height: 50px;
-  max-width: 1285px;
   width: 100%;
   border-bottom: 1px solid rgba(150, 149, 149, 0.4078431373);
   z-index: 1;
@@ -327,14 +396,13 @@ h4 {
   overflow-y: auto;
   z-index: 2;
   width: 240px;
-  max-height: 780px;
   height: 100%;
   border-right: 1px solid rgba(150, 149, 149, 0.4078431373);
-  /* background-color: #fff; */
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
+  transition: all 0.5s ease;
 }
 .aside svg {
   width: 25px;
@@ -349,6 +417,8 @@ h4 {
 .sidebar-items {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
 }
 
 .sidebar-items h4 {
@@ -361,19 +431,46 @@ h4 {
 
 .bottom-items {
   margin-top: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.aside.active {
+  width: 48px;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.bottom-items .active {
+  align-items: center;
+}
+
+.active h4,
+.active h2 {
+  display: none;
+}
+
+.logo-name {
+  margin-right: auto;
+}
+
+.active .svg-logo {
+  display: none;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* background-color: #fff; */
   overflow-y: auto;
-  width: 1296px;
   padding: 0 10px;
   grid-column: 2/-1;
 }
@@ -408,8 +505,13 @@ h4 {
 .dark .task-column .add-task-btn button {
   color: #fff;
 }
+
 .dark .func-header button {
   color: #fff;
+}
+
+.dark .func-header button:hover {
+  color: #54359d;
 }
 
 .dark .comment svg {
@@ -419,6 +521,7 @@ h4 {
 .dark .comment p {
   color: #fff;
 }
+
 @media (max-width: 1200px) {
   /* Tablet and below */
 
@@ -459,70 +562,30 @@ h4 {
     padding: 0 10px;
   }
 
-  .dark-mode {
-    margin-right: 3px;
-  }
-  .dark-mode label svg.sun {
-    left: 5px;
-    fill: #242424;
-    transition: 0.3s;
+  .switch {
+    width: 65px;
+    height: 22px;
   }
 
-  .dark-mode label svg {
-    position: absolute;
-    width: 8px;
-    top: -0.9px;
-    z-index: 100;
+  .dark .flicker {
+    transform: translateX(42px);
   }
-  .dark-mode label svg.moon {
-    left: 24px;
-    fill: #7e7e7e;
-    transition: 0.3s;
-  }
-  .dark-mode label svg {
-    position: absolute;
-    width: 8px;
-    top: -5px;
-    z-index: 100;
-  }
-  .dark-mode input:checked + label:after {
-    left: 33px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-  }
-  .dark-mode label:after {
-    content: "";
-    width: 14px;
-    height: 11px;
-    position: absolute;
+  .flicker {
+    width: 18px;
+    height: 18px;
     top: 2px;
     left: 2px;
-    background: #fff;
-    border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
   }
-  .dark-mode label {
-    width: 35px;
-    height: 15px;
-    position: relative;
-    display: block;
-    background: #f3f3f3;
-    border-radius: 200px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .dark-mode label:active:after {
+  .moon {
     width: 15px;
+    height: 15px;
+    top: -1px;
+    left: 42px;
   }
 
   .aside {
-    width: 30px;
-    padding: 20px 25px;
-    display: flex;
-    height: 100%;
-    align-items: center;
+    width: 200px;
+    padding: 0 5px;
   }
 
   .aside .svg-logo {
@@ -533,12 +596,7 @@ h4 {
   .aside svg {
     width: 25px;
     height: 25px;
-    margin-right: 0;
-  }
-
-  .aside .sidebar-items h4,
-  .aside .sidebar-items h2 {
-    display: none;
+    margin-right: 5px;
   }
 
   .main {
@@ -657,64 +715,25 @@ h4 {
     padding: 0 10px;
   }
 
-  .dark-mode {
-    margin-right: 3px;
+  .switch {
+    width: 55px;
+    height: 20px;
   }
-  .dark-mode label svg.sun {
-    left: 5px;
-    fill: #242424;
-    transition: 0.3s;
-  }
-
-  .dark-mode label svg {
-    position: absolute;
-    width: 8px;
-    top: -0.9px;
-    z-index: 100;
-  }
-  .dark-mode label svg.moon {
-    left: 24px;
-    fill: #7e7e7e;
-    transition: 0.3s;
-  }
-  .dark-mode label svg {
-    position: absolute;
-    width: 8px;
-    top: -5px;
-    z-index: 100;
-  }
-  .dark-mode input:checked + label:after {
-    left: 33px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-  }
-  .dark-mode label:after {
-    content: "";
-    width: 14px;
-    height: 11px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    background: #fff;
-    border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-  }
-  .dark-mode label {
-    width: 35px;
-    height: 15px;
-    position: relative;
-    display: block;
-    background: #f3f3f3;
-    border-radius: 200px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .dark-mode label:active:after {
+  .flicker {
     width: 15px;
+    height: 15px;
+    top: 2px;
+    left: 3px;
   }
-
+  .dark .flicker {
+    transform: translateX(35px);
+  }
+  .moon {
+    width: 12px;
+    height: 12px;
+    top: 0px;
+    left: 35px;
+  }
   .aside {
     width: 30px;
     padding: 20px 25px;
@@ -739,6 +758,9 @@ h4 {
     display: none;
   }
 
+  .bottom-items {
+    margin-bottom: 5.5rem;
+  }
   .main {
     width: 100%;
     margin: 0;
