@@ -390,6 +390,35 @@ h4 {
   background-color: transparent;
 }
 
+.dark .aside h4 {
+  color: #fff;
+}
+
+.dark .aside h4:hover {
+  color: #556178;
+}
+
+.dark .task-area .task-box .task-box-details p {
+  color: #fff;
+}
+
+.dark .column-header .column-header-details h4 {
+  color: #fff;
+}
+.dark .task-column .add-task-btn button {
+  color: #fff;
+}
+.dark .func-header button {
+  color: #fff;
+}
+
+.dark .comment svg {
+  fill: #fff;
+}
+
+.dark .comment p {
+  color: #fff;
+}
 @media (max-width: 1200px) {
   /* Tablet and below */
 

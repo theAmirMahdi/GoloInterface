@@ -6,10 +6,17 @@ let profileElems = document.querySelectorAll(".task-box-comment .profile img");
 let svgPaths = document.querySelectorAll("svg path.stroked");
 let svgFill = document.querySelector("svg path.filled");
 let pTagBG = document.querySelectorAll(".counter");
+let taskAreaElem = document.querySelector(".task-area");
+let funcHeaderElem = document.querySelector(".func-header");
+let headerElem = document.querySelector(".header");
+let commentElem = document.querySelectorAll("comment");
 
 switchElement.addEventListener("click", function () {
   containerElem.classList.toggle("dark");
+  headerElem.classList.toggle("dark");
   asideElem.classList.toggle("dark");
+  funcHeaderElem.classList.toggle("dark");
+  taskAreaElem.classList.toggle("dark");
   taskColumnElem.forEach((elem) => {
     elem.classList.toggle("column-header-dark");
   });
@@ -26,6 +33,10 @@ switchElement.addEventListener("click", function () {
 
   pTagBG.forEach((p) => {
     p.classList.toggle("counter-dark");
+  });
+
+  commentElem.forEach((c) => {
+    p.classList.toggl("dark");
   });
 
   if (containerElem.className.includes("dark")) {
