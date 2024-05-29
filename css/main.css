@@ -245,6 +245,7 @@ h4 {
   background-color: transparent;
   font-size: 15px;
   padding: 10px;
+  cursor: pointer;
   color: #70787f;
 }
 
@@ -521,6 +522,33 @@ h4 {
 
 .dark .comment p {
   color: #fff;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.invisible {
+  display: none;
+}
+
+.placeholder {
+  height: 145px;
+  border: 2px dashed #ccc;
+  margin-bottom: 10px;
+}
+
+.backlog-cl,
+.todo-cl,
+.progress-cl,
+.review-cl,
+.done-cl {
+  background-color: rgba(197, 197, 197, 0.167);
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) {
