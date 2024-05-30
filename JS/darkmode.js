@@ -10,6 +10,9 @@ let taskAreaElem = document.querySelector(".task-area");
 let funcHeaderElem = document.querySelector(".func-header");
 let headerElem = document.querySelector(".header");
 let commentElems = document.querySelectorAll(".comment");
+let modalContentDark = document.querySelector(".modal-content");
+let resultContainer = document.querySelector(".results-container");
+let resultItem = document.querySelectorAll(".result-item");
 
 function toggleDarkMode() {
   containerElem.classList.toggle("dark");
@@ -17,6 +20,11 @@ function toggleDarkMode() {
   asideElem.classList.toggle("dark");
   funcHeaderElem.classList.toggle("dark");
   taskAreaElem.classList.toggle("dark");
+  modalContentDark.classList.toggle("dark");
+  resultContainer.classList.toggle("dark");
+  resultItem.forEach((elem) => {
+    elem.classList.toggle("dark");
+  });
 
   taskColumnElem.forEach((elem) => {
     elem.classList.toggle("column-header-dark");
