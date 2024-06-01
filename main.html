@@ -556,7 +556,7 @@
         </div>
         <div class="task-area">
           <div class="task-column">
-            <div class="backlog column-header">
+            <div id="backlog" class="backlog column-header">
               <div class="column-header-details">
                 <h4>Backlog</h4>
                 <p class="counter">1</p>
@@ -735,11 +735,50 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button>+ New</button>
+              <button onclick="showModal('backlogModal')">+ New</button>
+            </div>
+
+            <div id="taskModal" class="task-modal">
+              <div class="modal-content-add">
+                <span class="close-task" onclick="hideModal('backlogModal')"
+                  >&times;</span
+                >
+                <h2>Create New Task</h2>
+                <form id="backlogForm">
+                  <label for="backlogTaskName">Task Name:</label>
+                  <input
+                    type="text"
+                    id="backlogTaskName"
+                    name="backlogTaskName"
+                    required
+                  /><br />
+                  <label for="backlogPriority">Priority:</label>
+                  <select id="backlogPriority" name="backlogPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option></select
+                  ><br />
+                  <label for="backlogStartDate">Start Date:</label>
+                  <input
+                    type="date"
+                    id="backlogStartDate"
+                    name="backlogStartDate"
+                    required
+                  /><br />
+                  <label for="backlogEndDate">End Date:</label>
+                  <input
+                    type="date"
+                    id="backlogEndDate"
+                    name="backlogEndDate"
+                    required
+                  /><br />
+                  <button type="submit">Add Task</button>
+                </form>
+              </div>
             </div>
           </div>
           <div class="task-column">
-            <div class="todo column-header">
+            <div id="todo" class="todo column-header">
               <div class="column-header-details">
                 <h4>To do</h4>
                 <p class="counter">3</p>
@@ -1143,11 +1182,11 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button>+ New</button>
+              <button onclick="showModal('taskModal')">+ New</button>
             </div>
           </div>
           <div class="task-column">
-            <div class="progress column-header">
+            <div id="progress" class="progress column-header">
               <div class="column-header-details">
                 <h4>Progress</h4>
                 <p class="counter">2</p>
@@ -1404,11 +1443,11 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button>+ New</button>
+              <button onclick="showModal('taskModal')">+ New</button>
             </div>
           </div>
           <div class="task-column">
-            <div class="reivew column-header">
+            <div id="reivew" class="reivew column-header">
               <div class="column-header-details">
                 <h4>Waiting Reivew</h4>
                 <p class="counter">1</p>
@@ -1589,11 +1628,11 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button>+ New</button>
+              <button onclick="showModal('taskModal')">+ New</button>
             </div>
           </div>
           <div class="task-column">
-            <div class="done column-header">
+            <div id="done" class="done column-header">
               <div class="column-header-details">
                 <h4>Done</h4>
                 <p class="counter">3</p>
@@ -1926,7 +1965,7 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button>+ New</button>
+              <button onclick="showModal('taskModal')">+ New</button>
             </div>
           </div>
         </div>
@@ -1936,5 +1975,7 @@
     <script src="JS/sidebarToggle.js"></script>
     <script src="JS/Drag&Drop.js"></script>
     <script src="JS/searchBtn.js"></script>
+    <script src="JS/weekoption.js"></script>
+    <script src="JS/addbtn.js"></script>
   </body>
 </html>
