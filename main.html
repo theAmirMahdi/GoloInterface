@@ -735,41 +735,39 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button onclick="showModal('backlogModal')">+ New</button>
+              <button>+ New</button>
             </div>
 
             <div id="taskModal" class="task-modal">
               <div class="modal-content-add">
-                <span class="close-task" onclick="hideModal('backlogModal')"
-                  >&times;</span
-                >
+                <span class="close-task">&times;</span>
                 <h2>Create New Task</h2>
-                <form id="backlogForm">
-                  <label for="backlogTaskName">Task Name:</label>
+                <form id="Form">
+                  <label for="TaskName">Task Name:</label>
                   <input
                     type="text"
-                    id="backlogTaskName"
-                    name="backlogTaskName"
+                    id="taskName"
+                    name="TaskName"
                     required
                   /><br />
-                  <label for="backlogPriority">Priority:</label>
-                  <select id="backlogPriority" name="backlogPriority">
+                  <label for="Priority">Priority:</label>
+                  <select id="priority" name="Priority">
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option></select
                   ><br />
-                  <label for="backlogStartDate">Start Date:</label>
+                  <label for="StartDate">Start Date:</label>
                   <input
                     type="date"
-                    id="backlogStartDate"
-                    name="backlogStartDate"
+                    id="startDate"
+                    name="StartDate"
                     required
                   /><br />
-                  <label for="backlogEndDate">End Date:</label>
+                  <label for="EndDate">End Date:</label>
                   <input
                     type="date"
-                    id="backlogEndDate"
-                    name="backlogEndDate"
+                    id="endDate"
+                    name="EndDate"
                     required
                   /><br />
                   <button type="submit">Add Task</button>
@@ -1182,7 +1180,7 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button onclick="showModal('taskModal')">+ New</button>
+              <button>+ New</button>
             </div>
           </div>
           <div class="task-column">
@@ -1443,7 +1441,7 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button onclick="showModal('taskModal')">+ New</button>
+              <button>+ New</button>
             </div>
           </div>
           <div class="task-column">
@@ -1628,7 +1626,7 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button onclick="showModal('taskModal')">+ New</button>
+              <button>+ New</button>
             </div>
           </div>
           <div class="task-column">
@@ -1965,7 +1963,7 @@
               </div>
             </div>
             <div class="add-task-btn">
-              <button onclick="showModal('taskModal')">+ New</button>
+              <button>+ New</button>
             </div>
           </div>
         </div>
