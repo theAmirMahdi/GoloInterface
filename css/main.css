@@ -308,6 +308,21 @@ h4 {
   font-size: 14px;
 }
 
+.arrow {
+  font-size: 1em;
+}
+
+#dateInput {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .task-box-comment {
   display: flex;
   justify-content: space-between;
