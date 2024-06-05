@@ -577,7 +577,48 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-              <button>Sort</button>
+              <button class="sort-btn">Sort</button>
+              <div id="sortmodal" class="modal">
+                <div class="modal-content">
+                  <span id="sort-close" class="close-btn">&times;</span>
+                  <div class="input-area">
+                    <form>
+                      <h3>Sorting</h3>
+                      <p>Note : please selecet one of them</p>
+                      <label>
+                        <input id="alphabet" type="checkbox" value="alphabet" />
+                        Alphabet
+                      </label>
+                      <label>
+                        <input type="checkbox" id="prority" value="priority" />
+                        Priority
+                      </label>
+                      <button type="button" class="apply-sort">Apply</button>
+                      <button type="button" id="sort-close">Close</button>
+                    </form>
+
+                    <!-- <label>
+                        <input
+                          id="date"
+                          type="checkbox"
+                          name="options"
+                          value="date"
+                        />
+                        Date </label
+                      ><br /> -->
+                    <!-- <label>
+                        <input
+                          id="priority"
+                          type="checkbox"
+                          name="options"
+                          value="priority"
+                        />
+                        Priority
+                      </label> -->
+                  </div>
+                  <!-- <button class="apply-sort">Apply</button> -->
+                </div>
+              </div>
             </div>
           </div>
           <div class="add-task-func">
@@ -989,8 +1030,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Planing and retrospective</h4>
-                  <p>July 16 > July 22</p>
+                  <h4 class="title">Planing and retrospective</h4>
+                  <p class="estimate">July 16 > July 22</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1060,8 +1101,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Staff meeting</h4>
-                  <p>July 18 > July 29</p>
+                  <h4 class="title">Staff meeting</h4>
+                  <p class="estimate">July 18 > July 29</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1136,8 +1177,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Program overhead</h4>
-                  <p>July 21 > July 21</p>
+                  <h4 class="title">Program overhead</h4>
+                  <p class="estimate">July 21 > July 21</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1212,8 +1253,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Redesign header</h4>
-                  <p>July 21 > July 21</p>
+                  <h4 class="title">Redesign header</h4>
+                  <p class="estimate">July 21 > July 21</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1397,8 +1438,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Bulding a responsive</h4>
-                  <p>July 18 > July 19</p>
+                  <h4 class="title">Bulding a responsive</h4>
+                  <p class="estimate">July 18 > July 19</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1473,8 +1514,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>General costumer support</h4>
-                  <p>July 18 > July 20</p>
+                  <h4 class="title">General costumer support</h4>
+                  <p class="estimate">July 18 > July 20</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1658,8 +1699,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Logo Design</h4>
-                  <p>July 15 > July 17</p>
+                  <h4 class="title">Logo Design</h4>
+                  <p class="estimate">July 15 > July 17</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1843,8 +1884,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Animation intro for a database</h4>
-                  <p>July 15 > July 16</p>
+                  <h4 class="title">Animation intro for a database</h4>
+                  <p class="estimate">July 15 > July 16</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1919,8 +1960,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Pastebin site</h4>
-                  <p>July 15 > July 16</p>
+                  <h4 class="title">Pastebin site</h4>
+                  <p class="estimate">July 15 > July 16</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -1995,8 +2036,8 @@
                   </svg>
                 </div>
                 <div class="task-box-details">
-                  <h4>Create a crpto litepaper</h4>
-                  <p>July 16 > July 18</p>
+                  <h4 class="title">Create a crpto litepaper</h4>
+                  <p class="estimate">July 16 > July 18</p>
                 </div>
                 <div class="task-box-comment">
                   <div class="profile">
@@ -2045,7 +2086,8 @@
     <script src="JS/datefilter.js"></script>
     <script src="JS/addbtncl.js"></script>
     <script src="JS/addbtnfn.js"></script>
-    <script src="JS/counter.js"></script> -->
-    <script src="JS/filterbtn.js"></script>
+    <script src="JS/counter.js"></script> 
+    <script src="JS/filterbtn.js"></script>-->
+    <script src="JS/sortbtn.js"></script>
   </body>
 </html>
