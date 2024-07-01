@@ -465,7 +465,7 @@
             <button>...</button>
           </div>
           <div class="filter-func">
-            <div>
+            <div class="filter-div">
               <svg
                 width="25px"
                 height="25px"
@@ -489,11 +489,22 @@
                   fill="#000000"
                 ></path>
               </svg>
-              <button>Search</button>
-              <!-- <label for="task-search">Search</label>
-              <input type="search" name="Search" id="task-search" hidden> -->
+              <button class="search-btn">Search</button>
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <div class="input-area">
+                    <span class="close-btn">&times;</span>
+                    <input
+                      type="text"
+                      placeholder="Type to search..."
+                      class="input-value"
+                    />
+                  </div>
+                  <div class="results-container"></div>
+                </div>
+              </div>
             </div>
-            <div>
+            <div class="filter-div">
               <svg
                 width="25px"
                 height="25px"
@@ -511,7 +522,7 @@
               </svg>
               <button>Filter</button>
             </div>
-            <div>
+            <div class="filter-div">
               <svg
                 width="25px"
                 height="25px"
@@ -1924,5 +1935,6 @@
     <script src="JS/darkmode.js"></script>
     <script src="JS/sidebarToggle.js"></script>
     <script src="JS/Drag&Drop.js"></script>
+    <script src="JS/searchBtn.js"></script>
   </body>
 </html>
