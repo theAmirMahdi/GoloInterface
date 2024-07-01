@@ -536,7 +536,21 @@
                   fill="#000000"
                 ></path>
               </svg>
-              <button>Filter</button>
+              <button class="filter-btn">Filter</button>
+              <div id="filtermodal" class="modal">
+                <div class="modal-content">
+                  <span id="close-btn" class="close-btn">&times;</span>
+                  <div class="input-area">
+                    <div><h3>Task Priority</h3></div>
+                    <select name="priority" id="priority">
+                      <option value="low-prority">Low</option>
+                      <option value="medium-prority">Medium</option>
+                      <option value="high-prority">High</option>
+                    </select>
+                  </div>
+                  <button class="apply-btn">Apply</button>
+                </div>
+              </div>
             </div>
             <div class="filter-div">
               <svg
@@ -2024,13 +2038,14 @@
         </div>
       </main>
     </div>
-    <script src="JS/darkmode.js"></script>
-    <script src="JS/sidebarToggle.js"></script>
+    <!-- <script src="JS/darkmode.js"></script>
+    <script src="JS/sidebarToggle.js"></script> -->
     <!-- <script src="JS/Drag&Drop.js"></script> -->
-    <script src="JS/searchBtn.js"></script>
+    <!-- <script src="JS/searchBtn.js"></script>
     <script src="JS/datefilter.js"></script>
     <script src="JS/addbtncl.js"></script>
     <script src="JS/addbtnfn.js"></script>
-    <script src="JS/counter.js"></script>
+    <script src="JS/counter.js"></script> -->
+    <script src="JS/filterbtn.js"></script>
   </body>
 </html>

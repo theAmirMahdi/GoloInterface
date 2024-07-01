@@ -322,7 +322,6 @@ h4 {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
 .task-box-comment {
   display: flex;
   justify-content: space-between;
@@ -753,6 +752,12 @@ button[type="submit"]:hover {
   font-size: 14px;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.apply-btn {
+  background-color: #143f99;
+  color: #fff;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
