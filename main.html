@@ -584,7 +584,7 @@
                   <div class="input-area">
                     <form>
                       <h3>Sorting</h3>
-                      <p>Note : please selecet one of them</p>
+                      <p>Note : please Select one of them</p>
                       <label>
                         <input id="alphabet" type="checkbox" value="alphabet" />
                         Alphabet
@@ -770,45 +770,66 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="low-prority prority">Low</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="commentModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close-box close-btn">&times;</span>
+                      <h2>Write your comment</h2>
+                      <input
+                        type="text"
+                        id="inputField"
+                        placeholder="Enter text here"
+                      />
+                      <button id="cmAddBtn apply-btn" type="submit">Add</button>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
-                  <h4>Customer Realations</h4>
+                  <h4>Customer Relations</h4>
                   <p>July 19 > July 28</p>
                 </div>
                 <div class="task-box-comment">
@@ -992,42 +1013,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="medium-prority prority">Medium</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#B0B0B0"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#B0B0B0"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#B0B0B0"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Planing and retrospective</h4>
@@ -1063,42 +1093,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="low-prority prority">Low</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Staff meeting</h4>
@@ -1139,42 +1178,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="low-prority prority">Low</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Program overhead</h4>
@@ -1215,42 +1263,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="low-prority prority">Low</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#70777F"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Redesign header</h4>
@@ -1400,42 +1457,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="high-prority prority">High</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Bulding a responsive</h4>
@@ -1476,42 +1542,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="medium-prority prority">Medium</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">General costumer support</h4>
@@ -1661,42 +1736,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="high-prority prority">High</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Logo Design</h4>
@@ -1846,42 +1930,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="medium-prority prority">Medium</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Animation intro for a database</h4>
@@ -1922,42 +2015,51 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="high-prority prority">High</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
                   <h4 class="title">Pastebin site</h4>
@@ -1998,45 +2100,54 @@
               <div class="task-box">
                 <div class="task-box-prority">
                   <p class="high-prority prority">High</p>
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <circle
-                      cx="12"
-                      cy="7"
-                      r="0.5"
-                      transform="rotate(90 12 7)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="0.5"
-                      transform="rotate(90 12 12)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="12"
-                      cy="17"
-                      r="0.5"
-                      transform="rotate(90 12 17)"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  <div class="more-option" id="more-option">
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <circle
+                        cx="12"
+                        cy="7"
+                        r="0.5"
+                        transform="rotate(90 12 7)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="0.5"
+                        transform="rotate(90 12 12)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="12"
+                        cy="17"
+                        r="0.5"
+                        transform="rotate(90 12 17)"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <ul class="items">
+                        <li>New Comment</li>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="task-box-details">
-                  <h4 class="title">Create a crpto litepaper</h4>
+                  <h4 class="title">Create a crypto lite paper</h4>
                   <p class="estimate">July 16 > July 18</p>
                 </div>
                 <div class="task-box-comment">
@@ -2088,6 +2199,7 @@
     <script src="JS/addbtnfn.js"></script>
     <script src="JS/counter.js"></script> 
     <script src="JS/filterbtn.js"></script>-->
-    <script src="JS/sortbtn.js"></script>
+    <!-- <script src="JS/sortbtn.js"></script> -->
+    <script src="JS/morebtn.js"></script>
   </body>
 </html>
