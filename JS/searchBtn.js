@@ -39,7 +39,6 @@ searchBtn.addEventListener("click", function () {
 });
 
 span.addEventListener("click", function () {
-  console.log("clicked");
   modal.style.display = "none";
 });
 

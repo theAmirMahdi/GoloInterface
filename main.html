@@ -450,10 +450,26 @@
         </div>
         <div class="func-header">
           <div class="week-func">
-            <div><button>Week</button></div>
+            <div id="funcdate" class="dateoption">
+              <select id="funcdateelemnt" name="Date">
+                <option value="date" selected>Date</option>
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+              </select>
+            </div>
+
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Enter date:</h3>
+                <input type="date" id="dateInput" style="display: none" />
+              </div>
+            </div>
             <div>
               <button><</button>
-              <button>July 15 - July 21</button>
+              <button>July 15 <span class="arrow">→</span> July 21</button>
               <button>></button>
             </div>
           </div>
@@ -553,10 +569,49 @@
           <div class="add-task-func">
             <button>+ New</button>
           </div>
+          <div id="funcModal" class="task-modal">
+            <div class="modal-content-add">
+              <span class="close-task">&times;</span>
+              <h2>Create New Task</h2>
+              <form id="Form">
+                <label for="TaskName">Task Name:</label>
+                <input
+                  type="text"
+                  id="taskName"
+                  name="TaskName"
+                  required
+                /><br />
+                <label for="Priority">Priority:</label>
+                <select id="priority" name="Priority">
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option></select
+                ><br />
+                <label for="Stage">Stage:</label>
+                <select id="stage" name="Stage">
+                  <option value="backlog-cl">Backlog</option>
+                  <option value="todo-cl">Todo</option>
+                  <option value="progress-cl">Progress</option>
+                  <option value="review-cl">Review</option>
+                  <option value="done-cl">Done</option></select
+                ><br />
+                <label for="StartDate">Start Date:</label>
+                <input
+                  type="date"
+                  id="startDate"
+                  name="StartDate"
+                  required
+                /><br />
+                <label for="EndDate">End Date:</label>
+                <input type="date" id="endDate" name="EndDate" required /><br />
+                <button type="submit">Add Task</button>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="task-area">
           <div class="task-column">
-            <div class="backlog column-header">
+            <div id="backlog" class="backlog column-header">
               <div class="column-header-details">
                 <h4>Backlog</h4>
                 <p class="counter">1</p>
@@ -737,9 +792,46 @@
             <div class="add-task-btn">
               <button>+ New</button>
             </div>
+
+            <div id="taskModal" class="task-modal">
+              <div class="modal-content-add">
+                <span class="close-task">&times;</span>
+                <h2>Create New Task</h2>
+                <form id="Form">
+                  <label for="TaskName">Task Name:</label>
+                  <input
+                    type="text"
+                    id="taskName"
+                    name="TaskName"
+                    required
+                  /><br />
+                  <label for="Priority">Priority:</label>
+                  <select id="priority" name="Priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option></select
+                  ><br />
+                  <label for="StartDate">Start Date:</label>
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="StartDate"
+                    required
+                  /><br />
+                  <label for="EndDate">End Date:</label>
+                  <input
+                    type="date"
+                    id="endDate"
+                    name="EndDate"
+                    required
+                  /><br />
+                  <button type="submit">Add Task</button>
+                </form>
+              </div>
+            </div>
           </div>
           <div class="task-column">
-            <div class="todo column-header">
+            <div id="todo" class="todo column-header">
               <div class="column-header-details">
                 <h4>To do</h4>
                 <p class="counter">3</p>
@@ -1147,7 +1239,7 @@
             </div>
           </div>
           <div class="task-column">
-            <div class="progress column-header">
+            <div id="progress" class="progress column-header">
               <div class="column-header-details">
                 <h4>Progress</h4>
                 <p class="counter">2</p>
@@ -1408,7 +1500,7 @@
             </div>
           </div>
           <div class="task-column">
-            <div class="reivew column-header">
+            <div id="reivew" class="reivew column-header">
               <div class="column-header-details">
                 <h4>Waiting Reivew</h4>
                 <p class="counter">1</p>
@@ -1593,7 +1685,7 @@
             </div>
           </div>
           <div class="task-column">
-            <div class="done column-header">
+            <div id="done" class="done column-header">
               <div class="column-header-details">
                 <h4>Done</h4>
                 <p class="counter">3</p>
@@ -1936,5 +2028,8 @@
     <script src="JS/sidebarToggle.js"></script>
     <script src="JS/Drag&Drop.js"></script>
     <script src="JS/searchBtn.js"></script>
+    <script src="JS/datefilter.js"></script>
+    <script src="JS/addbtncl.js"></script>
+    <script src="JS/addbtnfn.js"></script>
   </body>
 </html>
